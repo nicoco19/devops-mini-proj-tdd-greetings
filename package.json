@@ -4,8 +4,13 @@
   "description": "project tdd 1",
   "main": "index.js",
   "scripts": {
-    "start": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./src/app.js",
+    "test": "jest --watch",
+    "lint": "eslint ./src/**",
+    "lint:fix": "eslint --fix ./src/**",
+    "prettier": "prettier ./src/** --check",
+    "prettier:fix": "prettier ./src/** --write",
+    "list": "ls -la"
   },
   "author": "alexis simon nicolas",
   "license": "ISC",

@@ -19,3 +19,8 @@ test('check name undefined', () => {
     const result = greet(undefined);
     expect(result).toBe('Hello, my friend.');
 });
+
+test('check upper name', () => {
+    const result = greet('JERRY');
+    expect(result).toBe('HELLO, JERRY!');
+});

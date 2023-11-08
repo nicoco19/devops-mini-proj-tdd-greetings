@@ -1,20 +1,42 @@
 
 function greet(name){
 
-    let people;
+    if ( checkNameNotDefined(name) ) {
 
-    if(name === undefined || name === '' || name === null){
+        return "Hello, my friend.";
 
-        people = "my friend";
+    };
         
-    }else{
-        people = name;
-        if(name.toUpperCase() === name){
-            return "HELLO, " + people + "!";
-        }
-    }
+    if ( checkUpperCase(name) ) {
 
-    return "Hello, " + people + ".";
+        return "HELLO, " + name + "!";
+
+    };
+
+    if ( checkNotUpperCase(name) ) {
+
+        return "Hello, " + name + ".";
+
+    };
 };
+
+
+function checkNameNotDefined(name){
+
+    return name === undefined || name === '' || name === null;
+
+}
+
+function checkUpperCase(name){
+
+    return name.toUpperCase() === name;
+
+}
+
+function checkNotUpperCase(name){
+
+    return name.toUpperCase() !== name;
+    
+}
 
 module.exports = greet;

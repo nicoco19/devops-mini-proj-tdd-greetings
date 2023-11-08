@@ -56,7 +56,7 @@ function checkAllUpperNames(arrayUpper){
 
             } else {
 
-                stringUpper += ", " + arrayUpper[i];
+                stringUpper += " " + arrayUpper[i] + ",";
 
             }
 

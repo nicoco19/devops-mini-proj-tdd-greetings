@@ -39,3 +39,8 @@ test('check mutiple names upper and lower case', () => {
     const result = greet(["Amy", "BRIAN", "Charlotte"]);
     expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN !');
 });
+
+test('check mutiple names upper and lower case', () => {
+    const result = greet(["Amy", "BRIAN", "Charlotte", "ALEXIS"]);
+    expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN, ALEXIS !');
+});

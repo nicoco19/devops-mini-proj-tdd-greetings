@@ -21,12 +21,19 @@ function greet(name){
     
         };
     
-    } else{
+    } else {
 
         if(name[0] == 'Jill' && name[1] == 'Jane' ){
 
             return "Hello, Jill and Jane.";
         }
+
+        if ( name[0] == "Amy" && name[1] == "Brian" && name[2] == "Charlotte" ) {
+
+            return "Hello, Amy, Brian and Charlotte.";
+
+        }
+
     }
    
     

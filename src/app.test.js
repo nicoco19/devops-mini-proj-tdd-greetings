@@ -25,7 +25,12 @@ test('check upper name', () => {
     expect(result).toBe('HELLO, JERRY!');
 });
 
-test('chek double name', () => {
+test('check double name', () => {
     const result = greet(["Jill", "Jane"]);
     expect(result).toBe('Hello, Jill and Jane.');
+});
+
+test('check triple name', () => {
+    const result = greet(["Amy", "Brian", "Charlotte"]);
+    expect(result).toBe('Hello, Amy, Brian and Charlotte.');
 });

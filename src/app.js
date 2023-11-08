@@ -23,23 +23,7 @@ function greet(name){
     
     } else {
 
-        let string = "Hello";
-
-        for ( let i=0; i<name.length; i++ ) {
-
-            if ( i == name.length - 1 ) {
-
-                string += " and " + name[i] + ".";
-
-            } else {
-
-                string += ", " + name[i];
-
-            }
-
-        }
-
-        return string;
+        return checkAllNames(name);
 
     }
     
@@ -62,6 +46,28 @@ function checkNotUpperCase(name){
 
     return name.toUpperCase() !== name;
     
+}
+
+function checkAllNames(array){
+
+    let string = "Hello";
+
+    for ( let i=0; i<array.length; i++ ) {
+
+        if ( i == array.length - 1 ) {
+
+            string += " and " + array[i] + ".";
+
+        } else {
+
+            string += ", " + array[i];
+
+        }
+
+    }
+
+    return string;
+
 }
 
 module.exports = greet;

@@ -23,20 +23,25 @@ function greet(name){
     
     } else {
 
-        if(name[0] == 'Jill' && name[1] == 'Jane' ){
+        let string = "Hello";
 
-            return "Hello, Jill and Jane.";
+        for ( let i=0; i<name.length; i++ ) {
+
+            if ( i == name.length - 1 ) {
+
+                string += " and " + name[i] + ".";
+
+            } else {
+
+                string += ", " + name[i];
+
+            }
+
         }
 
-        if ( name[0] == "Amy" && name[1] == "Brian" && name[2] == "Charlotte" ) {
-
-            return "Hello, Amy, Brian and Charlotte.";
-
-        }
+        return string;
 
     }
-   
-    
     
 };
 

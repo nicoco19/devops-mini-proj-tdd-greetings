@@ -34,3 +34,8 @@ test('check triple name', () => {
     const result = greet(["Amy", "Brian", "Charlotte"]);
     expect(result).toBe('Hello, Amy, Brian and Charlotte.');
 });
+
+test('check mutiple names upper and lower case', () => {
+    const result = greet(["Amy", "BRIAN", "Charlotte"]);
+    expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN !');
+});

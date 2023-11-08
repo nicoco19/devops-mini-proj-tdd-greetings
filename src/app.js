@@ -1,4 +1,3 @@
-
 function greet(name){
 
     if(!Array.isArray(name)){
@@ -15,7 +14,7 @@ function greet(name){
     
         };
     
-        if ( checkNotUpperCase(name) ) {
+        if ( !checkUpperCase(name) ) {
     
             return "Hello, " + name + ".";
     
@@ -29,7 +28,6 @@ function greet(name){
     
 };
 
-
 function checkNameNotDefined(name){
 
     return name === undefined || name === '' || name === null;
@@ -42,31 +40,57 @@ function checkUpperCase(name){
 
 }
 
-function checkNotUpperCase(name){
-
-    return name.toUpperCase() !== name;
-    
-}
-
 function checkAllNames(array){
 
-    let string = "Hello";
+    const arrayLower = array.filter( x => !checkUpperCase(x) );
 
-    for ( let i=0; i<array.length; i++ ) {
+    let stringLower;
 
-        if ( i == array.length - 1 ) {
+    if ( arrayLower.length > 0 ) {
 
-            string += " and " + array[i] + ".";
+        stringLower = "Hello";
 
-        } else {
+        for ( let i=0; i<arrayLower.length; i++ ) {
 
-            string += ", " + array[i];
+            if ( i == arrayLower.length - 1 ) {
+    
+                stringLower += " and " + arrayLower[i] + ".";
+    
+            } else {
+    
+                stringLower += ", " + arrayLower[i];
+    
+            }
+    
+        }
+
+    }
+
+    const arrayUpper = array.filter( x => checkUpperCase(x) );
+
+    let stringUpper= "";
+
+    if ( arrayUpper.length > 0 ) {
+
+        stringUpper = " AND HELLO";
+
+        for ( let i=0; i<arrayUpper.length; i++ ) {
+
+            if ( i == arrayUpper.length - 1 ) {
+
+                stringUpper += " " + arrayUpper[i] + " !";
+
+            } else {
+
+                stringUpper += ", " + arrayUpper[i];
+
+            }
 
         }
 
     }
 
-    return string;
+    return stringLower + stringUpper;
 
 }
 

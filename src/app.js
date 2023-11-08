@@ -40,9 +40,34 @@ function checkUpperCase(name){
 
 }
 
-function checkAllNames(array){
+function checkAllUpperNames(arrayUpper){
 
-    const arrayLower = array.filter( x => !checkUpperCase(x) );
+    let stringUpper= "";
+
+    if ( arrayUpper.length > 0 ) {
+
+        stringUpper = " AND HELLO";
+
+        for ( let i=0; i<arrayUpper.length; i++ ) {
+
+            if ( i == arrayUpper.length - 1 ) {
+
+                stringUpper += " " + arrayUpper[i] + " !";
+
+            } else {
+
+                stringUpper += ", " + arrayUpper[i];
+
+            }
+
+        }
+
+    }
+
+    return stringUpper;
+}
+
+function checkAllLowerNames(arrayLower){
 
     let stringLower;
 
@@ -66,29 +91,19 @@ function checkAllNames(array){
 
     }
 
+    return stringLower;
+
+}
+
+function checkAllNames(array){
+
+    const arrayLower = array.filter( x => !checkUpperCase(x) );
+
+    const stringLower = checkAllLowerNames( arrayLower );
+
     const arrayUpper = array.filter( x => checkUpperCase(x) );
 
-    let stringUpper= "";
-
-    if ( arrayUpper.length > 0 ) {
-
-        stringUpper = " AND HELLO";
-
-        for ( let i=0; i<arrayUpper.length; i++ ) {
-
-            if ( i == arrayUpper.length - 1 ) {
-
-                stringUpper += " " + arrayUpper[i] + " !";
-
-            } else {
-
-                stringUpper += ", " + arrayUpper[i];
-
-            }
-
-        }
-
-    }
+    const stringUpper = checkAllUpperNames( arrayUpper );
 
     return stringLower + stringUpper;
 

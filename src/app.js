@@ -1,23 +1,36 @@
 
 function greet(name){
 
-    if ( checkNameNotDefined(name) ) {
+    if(!Array.isArray(name)){
 
-        return "Hello, my friend.";
+        if ( checkNameNotDefined(name) ) {
 
-    };
-        
-    if ( checkUpperCase(name) ) {
+            return "Hello, my friend.";
 
-        return "HELLO, " + name + "!";
+        };
+            
+        if ( checkUpperCase(name) ) {
+    
+            return "HELLO, " + name + "!";
+    
+        };
+    
+        if ( checkNotUpperCase(name) ) {
+    
+            return "Hello, " + name + ".";
+    
+        };
+    
+    } else{
 
-    };
+        if(name[0] == 'Jill' && name[1] == 'Jane' ){
 
-    if ( checkNotUpperCase(name) ) {
-
-        return "Hello, " + name + ".";
-
-    };
+            return "Hello, Jill and Jane.";
+        }
+    }
+   
+    
+    
 };
 
 

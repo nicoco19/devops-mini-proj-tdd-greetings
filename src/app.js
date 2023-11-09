@@ -1,4 +1,5 @@
 function greet(name) {
+
     if (!Array.isArray(name)) {
         if (checkNameNotDefined(name)) {
             return 'Hello, my friend.';
@@ -24,11 +25,19 @@ function checkUpperCase(name) {
     return name.toUpperCase() === name;
 }
 
-function checkAllUpperNames(arrayUpper) {
+function checkAllUpperNames(arrayUpper,language) {
     let stringUpper = '';
 
     if (arrayUpper.length > 0) {
-        stringUpper = ' AND HELLO';
+        if(language == 'fr'){
+            stringUpper = ' ET BONJOUR';
+        }
+        else if(language == 'nl'){
+            stringUpper = ' EN GOEIEDAG';
+        }else{
+            stringUpper = ' AND HELLO';
+        }
+        
 
         for (let i = 0; i < arrayUpper.length; i++) {
             if (i == arrayUpper.length - 1) {
@@ -42,15 +51,26 @@ function checkAllUpperNames(arrayUpper) {
     return stringUpper;
 }
 
-function checkAllLowerNames(arrayLower) {
+function checkAllLowerNames(arrayLower,language) {
     let stringLower;
+    let andWord;
 
     if (arrayLower.length > 0) {
-        stringLower = 'Hello';
+        if(language == 'fr'){
+            andWord = ' et ';
+            stringLower = 'Bonjour';
+        }
+        else if(language == 'nl'){
+            andWord = ' en ';
+            stringLower = 'Goeiedag';
+        }else{
+            andWord = ' and ';
+            stringLower = 'Hello';
+        }
 
         for (let i = 0; i < arrayLower.length; i++) {
             if (i == arrayLower.length - 1) {
-                stringLower += ' and ' + arrayLower[i] + '.';
+                stringLower += andWord + arrayLower[i] + '.';
             } else {
                 stringLower += ', ' + arrayLower[i];
             }
@@ -61,13 +81,21 @@ function checkAllLowerNames(arrayLower) {
 }
 
 function checkAllNames(array) {
+
     const arrayLower = array.filter((x) => !checkUpperCase(x));
 
-    const stringLower = checkAllLowerNames(arrayLower);
+    let language;
+    const languageVerif = arrayLower[arrayLower.length-1];
+    if(languageVerif == 'fr' || languageVerif == 'nl' || languageVerif == 'en'){
+        language = languageVerif;
+        arrayLower.pop();
+    }
+
+    const stringLower = checkAllLowerNames(arrayLower,language);
 
     const arrayUpper = array.filter((x) => checkUpperCase(x));
 
-    const stringUpper = checkAllUpperNames(arrayUpper);
+    const stringUpper = checkAllUpperNames(arrayUpper,language);
 
     return stringLower + stringUpper;
 }

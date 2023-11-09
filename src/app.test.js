@@ -26,21 +26,21 @@ test('check upper name', () => {
 });
 
 test('check double name', () => {
-    const result = greet(["Jill", "Jane"]);
+    const result = greet(['Jill', 'Jane']);
     expect(result).toBe('Hello, Jill and Jane.');
 });
 
 test('check triple name', () => {
-    const result = greet(["Amy", "Brian", "Charlotte"]);
+    const result = greet(['Amy', 'Brian', 'Charlotte']);
     expect(result).toBe('Hello, Amy, Brian and Charlotte.');
 });
 
 test('check mutiple names upper and lower case', () => {
-    const result = greet(["Amy", "BRIAN", "Charlotte"]);
+    const result = greet(['Amy', 'BRIAN', 'Charlotte']);
     expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN !');
 });
 
 test('check mutiple names upper and lower case', () => {
-    const result = greet(["Amy", "BRIAN", "Charlotte", "ALEXIS"]);
+    const result = greet(['Amy', 'BRIAN', 'Charlotte', 'ALEXIS']);
     expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN, ALEXIS !');
 });

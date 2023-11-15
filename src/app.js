@@ -25,20 +25,12 @@ function checkUpperCase(name) {
     return name.toUpperCase() === name;
 }
 
+
 function checkAllUpperNames(arrayUpper,language) {
     let stringUpper = '';
 
     if (arrayUpper.length > 0) {
-        if(language == 'fr'){
-            stringUpper = ' ET BONJOUR';
-        }
-        else if(language == 'nl'){
-            stringUpper = ' EN GOEIEDAG';
-        }else{
-            stringUpper = ' AND HELLO';
-        }
-        
-
+       stringUpper =  checkUpperLanguage(language);
         for (let i = 0; i < arrayUpper.length; i++) {
             if (i == arrayUpper.length - 1) {
                 stringUpper += ' ' + arrayUpper[i] + '!';
@@ -46,6 +38,21 @@ function checkAllUpperNames(arrayUpper,language) {
                 stringUpper += ' ' + arrayUpper[i] + ',';
             }
         }
+    }
+    return stringUpper;
+}
+
+function checkUpperLanguage(language){
+
+    let stringUpper;
+
+    if(language == 'fr'){
+        stringUpper = ' ET BONJOUR';
+    }
+    else if(language == 'nl'){
+        stringUpper = ' EN GOEIEDAG';
+    }else{
+        stringUpper = ' AND HELLO';
     }
 
     return stringUpper;
@@ -56,18 +63,9 @@ function checkAllLowerNames(arrayLower,language) {
     let andWord;
 
     if (arrayLower.length > 0) {
-        if(language == 'fr'){
-            andWord = ' et ';
-            stringLower = 'Bonjour';
-        }
-        else if(language == 'nl'){
-            andWord = ' en ';
-            stringLower = 'Goeiedag';
-        }else{
-            andWord = ' and ';
-            stringLower = 'Hello';
-        }
-
+        let result = checkLowerLanguage(language);
+        stringLower = result.stringLower;
+        andWord = result.andWord;
         for (let i = 0; i < arrayLower.length; i++) {
             if (i == arrayLower.length - 1 && arrayLower.length > 1) {
                 stringLower += andWord + arrayLower[i];
@@ -78,6 +76,25 @@ function checkAllLowerNames(arrayLower,language) {
     }
 
     return stringLower + '.';
+}   
+
+function checkLowerLanguage(language){
+    let stringLower;
+    let andWord;
+
+    if(language == 'fr'){
+        andWord = ' et ';
+        stringLower = 'Bonjour';
+    }
+    else if(language == 'nl'){
+        andWord = ' en ';
+        stringLower = 'Goeiedag';
+    }else{
+        andWord = ' and ';
+        stringLower = 'Hello';
+    }
+
+    return {stringLower,andWord};
 }
 
 function checkAllNames(array) {
@@ -99,5 +116,6 @@ function checkAllNames(array) {
 
     return stringLower + stringUpper;
 }
+
 
 module.exports = greet;

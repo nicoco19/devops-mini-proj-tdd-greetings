@@ -103,24 +103,5 @@ function checkAllLowerNames(arrayLower, language) {
     return stringLower;
 }
 
-function checkAllNames(array) {
-
-    const arrayLower = array.filter((x) => !checkUpperCase(x));
-
-    let language;
-    const languageVerif = arrayLower[arrayLower.length-1];
-    if(languageVerif == 'fr' || languageVerif == 'nl' || languageVerif == 'en'){
-        language = languageVerif;
-        arrayLower.pop();
-    }
-
-    const stringLower = checkAllLowerNames(arrayLower,language);
-
-    const arrayUpper = array.filter((x) => checkUpperCase(x));
-
-    const stringUpper = checkAllUpperNames(arrayUpper,language);
-
-    return stringLower + stringUpper;
-}
 
 module.exports = greet;

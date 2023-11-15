@@ -40,7 +40,7 @@ function checkAllNames(array) {
 }
 
 function checkNameNotDefined(name) {
-    return name === undefined || name === '' || name === null;
+    return name === undefined || name === ' ' || name === null;
 }
 
 function checkUpperCase(name) {
@@ -64,7 +64,7 @@ function checkAllUpperNames(arrayUpper, language) {
 
         for (let i = 0; i < arrayUpper.length; i++) {
             if (i == arrayUpper.length - 1) {
-                stringUpper += ' ' + arrayUpper[i] + ' !';
+                stringUpper += ' ' + arrayUpper[i] + '!';
             } else {
                 stringUpper += ' ' + arrayUpper[i] + ',';
             }

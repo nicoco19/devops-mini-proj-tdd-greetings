@@ -45,18 +45,18 @@ test('check mutiple names upper and lower case', () => {
     expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN, ALEXIS!');
 });
 
-test('check multiple language name fr (Lower)', () => { 
-    const result = greet(['Kratos', 'Thanatos','fr']);
+test('check multiple language name fr (Lower)', () => {
+    const result = greet(['Kratos', 'Thanatos', 'fr']);
     expect(result).toBe('Bonjour, Kratos et Thanatos.');
 });
 
-test('check multiple language name nl (Lower)', () => { 
-    const result = greet(['Kratos', 'Thanatos','nl']);
+test('check multiple language name nl (Lower)', () => {
+    const result = greet(['Kratos', 'Thanatos', 'nl']);
     expect(result).toBe('Goeiedag, Kratos en Thanatos.');
 });
 
-test('check multiple language name en (lower)', () => { 
-    const result = greet(['Kratos', 'Thanatos','en']);
+test('check multiple language name en (lower)', () => {
+    const result = greet(['Kratos', 'Thanatos', 'en']);
     expect(result).toBe('Hello, Kratos and Thanatos.');
 });
 

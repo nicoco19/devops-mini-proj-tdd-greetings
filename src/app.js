@@ -1,5 +1,4 @@
 function greet(name) {
-
     if (!Array.isArray(name)) {
         if (checkNameNotDefined(name)) {
             return 'Hello, my friend.';
@@ -18,21 +17,24 @@ function greet(name) {
 }
 
 function checkAllNames(array) {
-
     const arrayLower = array.filter((x) => !checkUpperCase(x));
 
     let language;
-    const languageVerif = arrayLower[arrayLower.length-1];
-    if(languageVerif == 'fr' || languageVerif == 'nl' || languageVerif == 'en'){
+    const languageVerif = arrayLower[arrayLower.length - 1];
+    if (
+        languageVerif == 'fr' ||
+        languageVerif == 'nl' ||
+        languageVerif == 'en'
+    ) {
         language = languageVerif;
         arrayLower.pop();
     }
 
-    const stringLower = checkAllLowerNames(arrayLower,language);
+    const stringLower = checkAllLowerNames(arrayLower, language);
 
     const arrayUpper = array.filter((x) => checkUpperCase(x));
 
-    const stringUpper = checkAllUpperNames(arrayUpper,language);
+    const stringUpper = checkAllUpperNames(arrayUpper, language);
 
     return stringLower + stringUpper;
 }

@@ -18,7 +18,7 @@ function greet(name) {
 }
 
 function checkNameNotDefined(name) {
-    return name === undefined || name === '' || name === null;
+    return name === undefined || name === ' ' || name === null;
 }
 
 function checkUpperCase(name) {

@@ -37,12 +37,12 @@ test('check triple name', () => {
 
 test('check mutiple names upper and lower case', () => {
     const result = greet(['Amy', 'BRIAN', 'Charlotte']);
-    expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN !');
+    expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN!');
 });
 
 test('check mutiple names upper and lower case', () => {
     const result = greet(['Amy', 'BRIAN', 'Charlotte', 'ALEXIS']);
-    expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN, ALEXIS !');
+    expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN, ALEXIS!');
 });
 
 test('check multiple language name fr (Lower)', () => { 
@@ -60,3 +60,7 @@ test('check multiple language name en (lower)', () => {
     expect(result).toBe('Hello, Kratos and Thanatos.');
 });
 
+test('check multiple language name fr (lower and UpperCase)', () =>{
+    const result = greet (['Kratos', 'THANATOS', 'fr']);
+    expect(result).toBe('Bonjour, Kratos. ET BONJOUR THANATOS!');
+});

@@ -41,7 +41,7 @@ function checkAllUpperNames(arrayUpper,language) {
 
         for (let i = 0; i < arrayUpper.length; i++) {
             if (i == arrayUpper.length - 1) {
-                stringUpper += ' ' + arrayUpper[i] + ' !';
+                stringUpper += ' ' + arrayUpper[i] + '!';
             } else {
                 stringUpper += ' ' + arrayUpper[i] + ',';
             }
@@ -69,15 +69,15 @@ function checkAllLowerNames(arrayLower,language) {
         }
 
         for (let i = 0; i < arrayLower.length; i++) {
-            if (i == arrayLower.length - 1) {
-                stringLower += andWord + arrayLower[i] + '.';
+            if (i == arrayLower.length - 1 && arrayLower.length > 1) {
+                stringLower += andWord + arrayLower[i];
             } else {
                 stringLower += ', ' + arrayLower[i];
             }
         }
     }
 
-    return stringLower;
+    return stringLower + '.';
 }
 
 function checkAllNames(array) {

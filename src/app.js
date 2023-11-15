@@ -17,6 +17,26 @@ function greet(name) {
     }
 }
 
+function checkAllNames(array) {
+
+    const arrayLower = array.filter((x) => !checkUpperCase(x));
+
+    let language;
+    const languageVerif = arrayLower[arrayLower.length-1];
+    if(languageVerif == 'fr' || languageVerif == 'nl' || languageVerif == 'en'){
+        language = languageVerif;
+        arrayLower.pop();
+    }
+
+    const stringLower = checkAllLowerNames(arrayLower,language);
+
+    const arrayUpper = array.filter((x) => checkUpperCase(x));
+
+    const stringUpper = checkAllUpperNames(arrayUpper,language);
+
+    return stringLower + stringUpper;
+}
+
 function checkNameNotDefined(name) {
     return name === undefined || name === ' ' || name === null;
 }
@@ -97,25 +117,7 @@ function checkLowerLanguage(language){
     return {stringLower,andWord};
 }
 
-function checkAllNames(array) {
 
-    const arrayLower = array.filter((x) => !checkUpperCase(x));
-
-    let language;
-    const languageVerif = arrayLower[arrayLower.length-1];
-    if(languageVerif == 'fr' || languageVerif == 'nl' || languageVerif == 'en'){
-        language = languageVerif;
-        arrayLower.pop();
-    }
-
-    const stringLower = checkAllLowerNames(arrayLower,language);
-
-    const arrayUpper = array.filter((x) => checkUpperCase(x));
-
-    const stringUpper = checkAllUpperNames(arrayUpper,language);
-
-    return stringLower + stringUpper;
-}
 
 
 module.exports = greet;

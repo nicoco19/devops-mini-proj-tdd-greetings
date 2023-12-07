@@ -45,79 +45,79 @@ test('check mutiple names upper and lower case', () => {
     expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN, ALEXIS!');
 });
 
-test('check multiple language name fr (Lower)', () => { 
-    const result = greet(['Kratos', 'Thanatos','fr']);
+test('check multiple language name fr (Lower)', () => {
+    const result = greet(['Kratos', 'Thanatos', 'fr']);
     expect(result).toBe('Bonjour, Kratos et Thanatos.');
 });
 
-test('check multiple language name nl (Lower)', () => { 
-    const result = greet(['Kratos', 'Thanatos','nl']);
+test('check multiple language name nl (Lower)', () => {
+    const result = greet(['Kratos', 'Thanatos', 'nl']);
     expect(result).toBe('Goeiedag, Kratos en Thanatos.');
 });
 
-test('check multiple language name en (lower)', () => { 
-    const result = greet(['Kratos', 'Thanatos','en']);
+test('check multiple language name en (lower)', () => {
+    const result = greet(['Kratos', 'Thanatos', 'en']);
     expect(result).toBe('Hello, Kratos and Thanatos.');
 });
 
-test('check multiple language name fr (lower and UpperCase)', () =>{
-    const result = greet (['Kratos', 'THANATOS', 'fr']);
+test('check multiple language name fr (lower and UpperCase)', () => {
+    const result = greet(['Kratos', 'THANATOS', 'fr']);
     expect(result).toBe('Bonjour, Kratos. ET BONJOUR THANATOS!');
 });
 
-test('check multiple language name en (lower and UpperCase)', () =>{
-    const result = greet (['Kratos', 'THANATOS', 'en']);
+test('check multiple language name en (lower and UpperCase)', () => {
+    const result = greet(['Kratos', 'THANATOS', 'en']);
     expect(result).toBe('Hello, Kratos. AND HELLO THANATOS!');
 });
 
-test('check multiple language name nl (lower and UpperCase)', () =>{
-    const result = greet (['Kratos', 'THANATOS', 'nl']);
+test('check multiple language name nl (lower and UpperCase)', () => {
+    const result = greet(['Kratos', 'THANATOS', 'nl']);
     expect(result).toBe('Goeiedag, Kratos. EN GOEIEDAG THANATOS!');
 });
 
-// test du prof 
+// test du prof
 
-test('test 1 du prof', () => { 
+test('test 1 du prof', () => {
     const result = greet('Jean-Kevin');
     expect(result).toBe('Hello, Jean-Kevin.');
 });
 
-test('test 2 a du prof', () => { 
+test('test 2 a du prof', () => {
     const result = greet(null);
     expect(result).toBe('Hello, my friend.');
 });
 
-test('test 2 b du prof', () => { 
+test('test 2 b du prof', () => {
     const result = greet(undefined);
     expect(result).toBe('Hello, my friend.');
 });
 
-test('test 2 c du prof', () => { 
+test('test 2 c du prof', () => {
     const result = greet(' ');
     expect(result).toBe('Hello, my friend.');
 });
 
-test('test 3 du prof', () => { 
+test('test 3 du prof', () => {
     const result = greet('KENOBI');
     expect(result).toBe('HELLO, KENOBI!');
 });
 
-test('test 4 du prof', () => { 
-    const result = greet(["Kratos", "Thanatos"]);
+test('test 4 du prof', () => {
+    const result = greet(['Kratos', 'Thanatos']);
     expect(result).toBe('Hello, Kratos and Thanatos.');
 });
 
-test('test 5 du prof', () => { 
-    const result = greet(["Kratos", "Thanatos", "Hypnos"]);
+test('test 5 du prof', () => {
+    const result = greet(['Kratos', 'Thanatos', 'Hypnos']);
     expect(result).toBe('Hello, Kratos, Thanatos and Hypnos.');
 });
 
-test('test 6 du prof', () => { 
-    const result = greet(["KRATOS", "Thanatos", "Hypnos"]);
+test('test 6 du prof', () => {
+    const result = greet(['KRATOS', 'Thanatos', 'Hypnos']);
     expect(result).toBe('Hello, Thanatos and Hypnos. AND HELLO KRATOS!');
 });
 
-test('test 7 du prof', () => { 
-    const result = greet(["Kratos", "Thanatos", "fr"]);
+test('test 7 du prof', () => {
+    const result = greet(['Kratos', 'Thanatos', 'fr']);
     expect(result).toBe('Bonjour, Kratos et Thanatos.');
 });

@@ -115,6 +115,6 @@ function checkLowerLanguage(language) {
     return { stringLower, andWord };
 }
 
-console.log( "TEST PULL REQUEST #1" );
+console.log('TEST PULL REQUEST #1');
 
 module.exports = greet;

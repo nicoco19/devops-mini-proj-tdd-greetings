@@ -22,3 +22,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: install dependencies      
+      run: npm install
+    - name: print date start pipeline
+      run: date "+heure start pipeline %H:%M:%S"
+    - name: check format code with prettier
+      run: npm run prettier   

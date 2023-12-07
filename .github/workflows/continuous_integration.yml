@@ -27,4 +27,10 @@ jobs:
     - name: print date start pipeline
       run: date "+heure start pipeline %H:%M:%S"
     - name: check format code with prettier
-      run: npm run prettier   
+      run: npm run prettier
+    - name: check code with lint
+      run: npm run lint
+    - name: test code with jest
+      run: npm run test
+    - name: build application  
+      run: npm run build  

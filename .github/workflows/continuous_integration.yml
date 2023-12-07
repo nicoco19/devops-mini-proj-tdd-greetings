@@ -34,3 +34,7 @@ jobs:
       run: npm run test
     - name: build application  
       run: npm run build  
+    - name: print date end pipeline
+      run: date "+heure end pipeline %H:%M:%S"
+    - name: print succes message
+      run: echo "PIPELINE SUCCESS WITHOUT ERRORS" 

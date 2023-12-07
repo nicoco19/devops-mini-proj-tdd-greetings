@@ -47,7 +47,7 @@ Liens utiles:
 ```
 - En particulier : à quoi sert le “on” ? dans votre fichier YML ?  Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ? 
 ```bash
-<votre réponse ici>
+<le “on” sert à déclencher la pipeline en fonction des évenements. La différence entre “on push” et “on pull request” est que le “on push”  déclenche la pipeline à chaque push donc il n'y a pas de vérification de code alors que “on pull request” déclenche la pipeline à chaque  pull request et une fois qu'elle est acceptée par un autre développeur qui aura relu le code un merge est éffectué et applique les changements. Donc on conseillerait à un groupe de développeurs junior d'utiliser “on pull request” dans leurs pipelines car il y a une revue de code.>
 ```
 - Quelle est la différence entre run et run_on ?  Expliquez par rapport à votre pipeline.  
 ```bash

@@ -1,7 +1,16 @@
-name: continuous_integration_pipeline
+name: pipelineProject2
 on:
   pull_request:
     types:
       - opened
       - synchronize
       - closed
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/

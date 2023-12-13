@@ -63,7 +63,7 @@ Donc on conseillerait à un groupe de développeurs junior d'utiliser “on pull
 ```
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline. 
 ```bash
-<votre réponse ici>
+<non car on doit respecter le temps d exécution de chaque étapes. Les étapes les plus courtes doivent être avant les étapes les plus longues.\n Par exemple le build sera la dernière étape car c est le plus long à être exectuté.\n Mais également on doit respecter un certain ordre logique on ne peut pas utiliser les dépendances (prettier, lint) si on ne les installes pas (NPM i). >
 ```
 - Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ?  Quelles questions devriez-vous vous poser ? 
 ```bash

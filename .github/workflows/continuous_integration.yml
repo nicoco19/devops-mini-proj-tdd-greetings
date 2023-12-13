@@ -32,6 +32,8 @@ jobs:
       run: npm run lint
     - name: test code with jest
       run: npm run test
+    - name : test coverage more 80%
+      run: npm run coverage
     - name: build application  
       run: npm run build  
     - name: print date end pipeline

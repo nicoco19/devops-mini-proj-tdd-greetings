@@ -60,7 +60,7 @@ Donc on conseillerait à un groupe de développeurs junior d'utiliser “on pull
 ```
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline. 
 ```bash
-<votre réponse ici>
+<"use" fera référence à l'intégration de ces éléments dans le processus de développement tandis que "run" sera plutôt utilisé dans le cadre d'exécution de processus. "run" peut très bien être automatisé à son exécution (Pipeline)>
 ```
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline. 
 ```bash

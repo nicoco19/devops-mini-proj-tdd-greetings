@@ -25,7 +25,9 @@ jobs:
     - name: install dependencies      
       run: npm install
     - name: print date start pipeline test
-      run: date "+heure start pipeline %H:%M:%S"
+       run: |
+        TZ="Europe/Brussels"
+        echo "hour start pipeline: $(date "+%H:%M:%S")"
     - name: check format code with prettier
       run: npm run prettier
     - name: check code with lint
@@ -37,6 +39,8 @@ jobs:
     - name: build application  
       run: npm run build  
     - name: print date end pipeline
-      run: date "+heure end pipeline %H:%M:%S"
+      run: |
+        TZ="Europe/Brussels"
+        echo "hour end pipeline: $(date "+%H:%M:%S")"
     - name: print succes message
       run: echo "PIPELINE SUCCESS WITHOUT ERRORS" 

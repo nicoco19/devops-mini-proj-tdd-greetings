@@ -24,7 +24,7 @@ jobs:
         cache: 'npm'
     - name: install dependencies      
       run: npm install
-    - name: print date start pipeline
+    - name: print date start pipeline test
       run: steps.date.outputs.date
     - name: check format code with prettier
       run: npm run prettier

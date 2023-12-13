@@ -25,7 +25,7 @@ jobs:
     - name: install dependencies      
       run: npm install
     - name: print date start pipeline test
-     run: |
+      run: |
         TZ="Europe/Paris" 
         echo "hour start pipeline: $(TZ=$TZ date "+%H:%M:%S")"
 
@@ -35,7 +35,7 @@ jobs:
       run: npm run lint
     - name: test code with jest
       run: npm run test
-    - name : test coverage more 80%
+    - name: test coverage more 80%
       run: npm run coverage
     - name: build application  
       run: npm run build  
@@ -43,5 +43,5 @@ jobs:
       run: |
         TZ="BE"
         echo "hour end pipeline: $(date "+%H:%M:%S")"
-    - name: print succes message
-      run: echo "PIPELINE SUCCESS WITHOUT ERRORS" 
+    - name: print success message
+      run: echo "PIPELINE SUCCESS WITHOUT ERRORS"

@@ -41,7 +41,7 @@ jobs:
       run: npm run build  
     - name: print date end pipeline
       run: |
-        TZ="BE"
-        echo "hour end pipeline: $(date "+%H:%M:%S")"
+        TZ="Europe/Paris" 
+        echo "hour end pipeline: $(TZ=$TZ date "+%H:%M:%S")"
     - name: print success message
       run: echo "PIPELINE SUCCESS WITHOUT ERRORS"

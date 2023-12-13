@@ -4,7 +4,7 @@ Travail de recherche , mettre en place de l'integration continue avec les GitHub
 ## Informations
 - N° de groupe : 10
 - Membres du groupe : Arnaud Alexis, Bosseler Simon, Venturini Nicolas
-- Pipeline : https://github.com/nicoco19/devops-mini-proj-tdd-greetings/tree/master/.github/workflows
+- Pipeline : https://github.com/nicoco19/devops-mini-proj-tdd-greetings/blob/master/.github/workflows/continuous_integration.yml
 
 
 ## Énoncé

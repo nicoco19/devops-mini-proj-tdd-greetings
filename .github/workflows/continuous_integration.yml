@@ -26,7 +26,7 @@ jobs:
       run: npm install
     - name: print date start pipeline test
       run: |
-        TZ="BE"
+        TZ="UTC+2"
         echo "hour start pipeline: $(date "+%H:%M:%S")"
     - name: check format code with prettier
       run: npm run prettier

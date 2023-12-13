@@ -25,9 +25,10 @@ jobs:
     - name: install dependencies      
       run: npm install
     - name: print date start pipeline test
-      run: |
-        TZ="UTC+2"
-        echo "hour start pipeline: $(date "+%H:%M:%S")"
+     run: |
+        TZ="Europe/Paris" 
+        echo "hour start pipeline: $(TZ=$TZ date "+%H:%M:%S")"
+
     - name: check format code with prettier
       run: npm run prettier
     - name: check code with lint

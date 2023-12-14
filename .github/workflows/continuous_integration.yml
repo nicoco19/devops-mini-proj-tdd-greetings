@@ -44,4 +44,4 @@ jobs:
         TZ="Europe/Paris" 
         echo "hour end pipeline: $(TZ=$TZ date "+%H:%M:%S")"
     - name: print success message
-      run: echo "PIPELINE SUCCESS WITHOUT ERRORS "
+      run: echo "PIPELINE SUCCESS WITHOUT ERRORS"

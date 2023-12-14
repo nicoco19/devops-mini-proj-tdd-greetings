@@ -19,8 +19,8 @@
     "collectCoverageFrom": ["./src/**"],
     "coverageThreshold": {
       "global": {
-        "lines": 80
-      }
+        "Funcs": 80
+      
     }
   },
   "author": "alexis simon nicolas",

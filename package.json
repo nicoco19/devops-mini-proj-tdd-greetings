@@ -14,6 +14,15 @@
     "list": "ls -la",
     "build": "webpack ./src/app.js -o dist/"
   },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": ["./src/**"],
+    "coverageThreshold": {
+      "global": {
+        "lines": 80
+      }
+    }
+  },
   "author": "alexis simon nicolas",
   "license": "ISC",
   "dependencies": {

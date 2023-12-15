@@ -57,11 +57,11 @@ Donc on conseillerait à un groupe de développeurs junior d utiliser “on pull
 ```
 - Quelle est la différence entre run et run_on ?  Expliquez par rapport à votre pipeline.  
 ```bash
-<Dans notre pipeline, nous avons utilisé runs-on pour définir le système d'exploitation sous lequel la pipeline va s'exécuter :
-"runs-on: ubuntu-latest", dans notre cas, nous la lançons sur une machine sous Linux, avec la dernière version d'ubuntu.
-"run", est un mot-clé permettant de définir un ensemble de commandes à exécuter lors des étapes d'une pipeline.
+<Dans notre pipeline, nous avons utilisé runs-on pour définir le système d exploitation sous lequel la pipeline va s exécuter :
+"runs-on: ubuntu-latest", dans notre cas, nous la lançons sur une machine sous Linux, avec la dernière version d ubuntu.
+"run", est un mot-clé permettant de définir un ensemble de commandes à exécuter lors des étapes d une pipeline.
 Dans notre cas, nous avons plusieurs fois le mot-clé "run", tel que le suivant : "echo "PIPELINE SUCCESS WITHOUT ERRORS "".
-Celui-ci est une commande linux, "echo" permettant d'afficher du texte dans une ligne de commande.>
+Celui-ci est une commande linux, "echo" permettant d afficher du texte dans une ligne de commande.>
 ```
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline. 
 ```bash
